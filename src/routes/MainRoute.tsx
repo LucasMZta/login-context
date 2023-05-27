@@ -2,7 +2,7 @@ import { useRoutes } from "react-router-dom";
 import { Login } from "../pages/Login";
 import { Cadastro } from "../pages/Cadastro";
 import { Home } from "../pages/Home";
-import { RequireAuth } from "../requireAuth";
+import { RequireAuth } from "../RequireAuth";
 import { NotFound } from "../pages/NotFound";
 
 export const MainRoute = () => {
