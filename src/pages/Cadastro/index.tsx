@@ -36,10 +36,10 @@ export const Cadastro = () => {
     return (
         <div className='flex items-center min-h-screen'>
             <div className='flex-1 flex flex-col justify-around items-center p-4 sm:p-2 md:p-0'>
-                <div className='w-128'>
-                    <h2 className='text-4xl font-semibold mb-3' >Cadastrar-se, {state.user.name} </h2>
+                <div className='w-full sm:w-132'>
+                    <h2 className='text-4xl font-semibold mb-3' >Cadastrar-se </h2>
                     <form action="" className='flex flex-col'>
-                        <fieldset className='flex my-2 gap-2'>
+                        <fieldset className='flex flex-col sm:flex-row my-2 gap-2'>
                             <div className='flex flex-col flex-1'>
                                 <label htmlFor="name" className='mb-2'>*Nome</label>
                                 <input id='name' type="text" placeholder='' className='border p-2'
@@ -73,7 +73,7 @@ export const Cadastro = () => {
                                 onChange={handlePassword}
                             />
                         </fieldset>
-                        <fieldset className='flex justify-around'>
+                        <fieldset className='flex flex-col sm:flex-row justify-around'>
                             <button onClick={handleCadastro}
                                 className='rounded bg-brand-green text-white text-center font-semibold p-3 px-10 my-4'>Cadastrar</button>
                             <button onClick={() => { navigate(-1) }}

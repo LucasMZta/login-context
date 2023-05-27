@@ -41,7 +41,7 @@ export const Login = () => {
                 </div>
             </div>
             <div className='flex-1 flex flex-col justify-around items-center p-4 sm:p-2 md:p-0'>
-                <div className='w-96'>
+                <div className='w-full sm:w-132'>
                     <span className='block'>Bem vindo de volta </span>
                     <h2 className='text-2xl font-semibold mb-3' >Faça login na sua conta</h2>
                     <form action="" className='flex flex-col'>
