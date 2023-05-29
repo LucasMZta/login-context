@@ -3,10 +3,10 @@ import { reducerActionType } from "../types/reducerActionType";
 
 
 export const userInitialState: userType = {
-    name: '',
-    lastname: '',
-    email: '',
-    password: ''
+    name: 'Lucas',
+    lastname: 'Martins',
+    email: 'lucas@lucas.com',
+    password: '123'
 }
 
 export const userReducer = (state: userType, action: reducerActionType) => {

@@ -13,6 +13,7 @@ export default {
         'brand-green': '#04C45C'
       },
       spacing: {
+        '120': '24rem',
         '128': '32rem',
         '132': '36rem'
       }

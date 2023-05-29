@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { Context } from '../../contexts/Context'
 import { ChangeEvent, useContext, useState } from 'react'
 
@@ -44,6 +44,7 @@ export const Cadastro = () => {
                                 <label htmlFor="name" className='mb-2'>*Nome</label>
                                 <input id='name' type="text" placeholder='' className='border p-2'
                                     required
+                                    autoComplete='off'
                                     value={name}
                                     onChange={handleName}
                                 />
@@ -52,6 +53,7 @@ export const Cadastro = () => {
                                 <label htmlFor="lastname" className='mb-2'>*Sobrenome</label>
                                 <input id='lastname' type="text" placeholder='' className='border p-2'
                                     required
+                                    autoComplete='off'
                                     value={lastName}
                                     onChange={handleLastName}
                                 />
@@ -61,6 +63,7 @@ export const Cadastro = () => {
                             <label htmlFor="email" className='mb-2'>*E-mail</label>
                             <input id='email' type="email" placeholder='email@email.com' className='border p-2'
                                 required
+                                autoComplete='off'
                                 value={email}
                                 onChange={handleEmail}
                             />
@@ -69,15 +72,19 @@ export const Cadastro = () => {
                             <label htmlFor="pass" className='mb-2'>*Senha</label>
                             <input id='pass' type="password" placeholder='Senha' className='border p-2 rounded'
                                 required
+                                autoComplete='off'
                                 value={password}
                                 onChange={handlePassword}
                             />
                         </fieldset>
-                        <fieldset className='flex flex-col sm:flex-row justify-around'>
+                        <fieldset className='flex flex-col sm:flex-row items-center justify-around'>
                             <button onClick={handleCadastro}
                                 className='rounded bg-brand-green text-white text-center font-semibold p-3 px-10 my-4'>Cadastrar</button>
-                            <button onClick={() => { navigate(-1) }}
-                                className='rounded bg-red-800 text-white text-center font-semibold p-3 px-10 my-4'>Voltar</button>
+                            <span className='block'> Já cadastrado? <Link to={'/login'} className='text-blue-600' > Faça o Login </Link> </span>
+
+
+                            {/* <button onClick={() => { navigate(-1) }}
+                                className='rounded bg-red-800 text-white text-center font-semibold p-3 px-10 my-4'>Voltar</button> */}
                         </fieldset>
 
                     </form>
